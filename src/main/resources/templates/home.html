@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+
+<html th:replace="~{mainLayout :: layout( ~{:: title/content()}, ~{:: h1/content()}, ~{:: #bodyContent/content()}, ~{})}"
+        lang="en-US" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>[[#{home.page.title}]]</title>
+    </head>
+
+    <body>
+        <h1>[[#{home.page.header}]]</h1>
+        <div id="bodyContent">
+            <p><a th:href="@{/users}">[[#{home.allUsers}]]</a></p>
+        </div>
+    </body>
+</html>

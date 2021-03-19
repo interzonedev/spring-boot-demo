@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d [%thread] %-5level %logger [%file:%line] - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="org.springframework" level="INFO" />
+    <logger name="org.springframework.orm.jpa.JpaTransactionManager" level="DEBUG" />
+
+    <logger name="org.hibernate" level="INFO" />
+    <!-- Display Hibernate queries in the logs. -->
+    <logger name="org.hibernate.SQL" level="DEBUG" />
+    <!-- Display Hibernate query parameter binding and extraction and stats in the logs. -->
+    <logger name="org.hibernate.type.descriptor.sql" level="TRACE" />
+    <logger name="org.hibernate.stat" level="DEBUG" />
+
+    <logger name="org.thymeleaf" level="INFO" />
+
+    <logger name="com.interzonedev.springbootdemo" level="DEBUG" />
+
+    <root level="DEBUG">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>

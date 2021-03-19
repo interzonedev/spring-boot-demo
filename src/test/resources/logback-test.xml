@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d [%thread] %-5level %logger [%file:%line] - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="org.springframework" level="INFO" />
+    <logger name="org.springframework.orm.jpa.JpaTransactionManager" level="DEBUG" />
+    <logger name="org.hibernate" level="INFO" />
+    <logger name="org.dbunit" level="INFO" />
+    <logger name="com.jayway.jsonpath" level="INFO" />
+    <logger name="org.thymeleaf" level="INFO" />
+    <logger name="com.interzonedev.zankou" level="INFO" />
+
+    <logger name="com.interzonedev.springbootdemo" level="DEBUG" />
+
+    <root level="DEBUG">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>

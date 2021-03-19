@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html th:fragment="layout(title, bodyHeader, bodyContent, scripts)" lang="en-US" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>
+            [[#{global.page.title.prefix}]] - <th:block th:replace="${title}">Page specific part of title goes here</th:block>
+        </title>
+
+        <link rel="icon" type="image/png" th:href="@{/img/favicon.png}" />
+
+        <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/main.css}" />
+    </head>
+
+    <body>
+        <div id="bodyContainer">
+            <h1>
+                [[#{global.page.header.prefix}]] - <th:block th:replace="${bodyHeader}">Page specific part of body header</th:block>
+            </h1>
+            <div th:replace="${bodyContent}">
+                <p>Page specific content goes here</p>
+            </div>
+        </div>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.4.0/backbone-min.js"></script>
+
+        <script th:src="@{/js/iz.js}"></script>
+
+        <div th:replace="${scripts}">
+            <script>//Page specific JavaScript goes here</script>
+        </div>
+    </body>
+</html>

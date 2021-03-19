@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<dataset>
+
+    <sbd_user sbd_user_id="1" first_name="Gern" last_name="Blanston" email="gern@blanston.com"
+              time_created="2019-01-01 12:00:000" time_updated="2019-01-01 12:00:000" />
+
+    <sbd_user sbd_user_id="2" first_name="Uncle" last_name="Fester" email="uncle@fester.com"
+              time_created="2019-01-01 12:00:000" time_updated="2019-01-01 12:00:000" />
+
+    <sbd_user sbd_user_id="3" first_name="Cousin" last_name="It" email="cousin@it.com"
+              time_created="2019-01-01 12:00:000" time_updated="2019-01-01 12:00:000" />
+
+    <sbd_user first_name="Testy" email="testy.testerson@test.com" />
+
+</dataset>

@@ -1,0 +1,46 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.3.3.RELEASE'
+    id "io.spring.dependency-management" version "1.0.10.RELEASE"
+}
+
+repositories {
+    jcenter()
+    maven {
+        url "https://repo.interzonedev.com/maven/releases"
+    }
+}
+
+sourceCompatibility = 11
+targetCompatibility = 11
+
+dependencies {
+    implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("org.springframework.boot:spring-boot-starter-actuator")
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
+    implementation("org.hibernate.validator:hibernate-validator:6.1.5.Final")
+    implementation("javax.inject:javax.inject:1")
+    implementation("org.postgresql:postgresql:42.2.16")
+    implementation("org.apache.commons:commons-dbcp2:2.7.0")
+    implementation("org.apache.commons:commons-lang3:3.11")
+    implementation("com.google.guava:guava:29.0-jre")
+    implementation("com.interzonedev:commandr:3.0.0")
+    implementation("org.flywaydb:flyway-core:6.5.5")
+
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("com.interzonedev:zankou:2.0.0")
+    testImplementation("com.jayway.jsonpath:json-path-assert:2.4.0")
+}
+
+sourceSets {
+    main {
+        resources {
+            exclude 'db/init'
+        }
+    }
+}
+
+test {
+    useJUnitPlatform()
+}

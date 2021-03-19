@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html th:replace="~{mainLayout :: layout( ~{:: title/content()}, ~{:: h1/content()}, ~{:: #bodyContent/content()}, ~{:: #scripts/content()})}"
+        lang="en-US" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>[[#{users.page.title}]]</title>
+    </head>
+
+    <body>
+        <h1>[[#{users.page.header}]]</h1>
+        <div id="bodyContent">
+            <div id="usersApplicationContainer"></div>
+            <p><a th:href="@{/}">[[#{users.mainMenu}]]</a></p>
+        </div>
+        <div id="scripts">
+            <script th:src="@{/js/user/User.js}"></script>
+            <script th:src="@{/js/user/UserView.js}"></script>
+            <script th:src="@{/js/user/Users.js}"></script>
+            <script th:src="@{/js/user/UsersView.js}"></script>
+            <script th:src="@{/js/user/UsersApplicationView.js}"></script>
+            <script th:src="@{/js/user/UsersRouter.js}"></script>
+        </div>
+    </body>
+</html>
